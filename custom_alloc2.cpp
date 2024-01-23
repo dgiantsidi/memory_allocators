@@ -1,3 +1,5 @@
+#include "heap_alloc.hpp"
+#include "stack_alloc.hpp"
 #include <cstddef>
 #include <cstdint>
 #include <cstring>
@@ -5,6 +7,7 @@
 #include <stdlib.h>
 #include <vector>
 
+#if 0
 template <class T> class _my_alloc_heap {
 public:
   using pointer = T *;
@@ -90,6 +93,7 @@ private:
   uint64_t allocated_mem = 0;
   uintptr_t cur_ptr;
 };
+#endif
 
 template <class T, typename my_alloc> class Allocator {
 public:
